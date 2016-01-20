@@ -1,6 +1,6 @@
 body {margin: 0 auto;}
 
-h1 {font-family: 'Quicksand', sans-serif;}
+h1, h2 {font-family: 'Quicksand', sans-serif;}
 p {font-family: 'Quicksand', sans-serif; color: black;}
 
 
@@ -20,6 +20,7 @@ p {font-family: 'Quicksand', sans-serif; color: black;}
 */
 
 .titel {text-align: center; }
+.titel hr{width: 140px; margin-left: 727px; margin-bottom: 30px; border-style: solid; border-color: #FFC374;  }
 
 
 
@@ -38,7 +39,6 @@ p {font-family: 'Quicksand', sans-serif; color: black;}
 | Second Section / Kais Ghedamsi
 |--------------------------------------------------------------------------
 */
-.wrapper { background-color: black; height:auto;}
 
 div.img {
     border: 1px solid #ccc;
@@ -84,6 +84,19 @@ div.desc {
     display: table;
     clear: both;
 }
+
+/*
+|--------------------------------------------------------------------------
+| Second HTML / Kais Ghedamsi
+|--------------------------------------------------------------------------
+*/
+
+.wrapper { width: 1024px; margin: auto 0;}
+#titel-1 h1{margin-left: 50px;}
+#titel-2 h2{margin-left: 50px;}
+.img-two {margin-left: 50px; magrin-top: 50px;}
+#text-1 {margin-left: 50px;} 
+
 
 /*
 |--------------------------------------------------------------------------
