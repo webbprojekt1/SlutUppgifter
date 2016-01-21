@@ -107,7 +107,7 @@
 </div>
 
 <div class="form-action">
-<form id="bookform" method="get" target="_self" action="Servlet1" onsubmit="return validate(this)"
+<form id="bookform" method="get" target="_self" action="Servlet" onsubmit="return validate(this)"
 		accept-charset="UTF-8">
    Name:<input type="text" id="fullname" name="fullname" /><br>
    Email:<input type="email" id="email" name="email" class="required"/><br>
@@ -117,7 +117,11 @@
    <input type="submit" name="submit" value="Book" id="booksubmit"/>
 </form>
 </div>
-
+  <!-- Author Kais Ghedamsi -->
+  <div id="footer">
+  <p>Posted By: Kais, Irina & Bo</p>
+  </div>
+  
 <!-- authur:Bo Yang -->
 <script type="text/javascript">
 $(document).ready(function(){
@@ -129,16 +133,12 @@ $(document).ready(function(){
       }
   });
 
-<<<<<<< Updated upstream
+
+
   $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
       $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
   });
-=======
-<!-- Author Kais Ghedamsi -->
-<div id="footer">
-<p>Posted By: Kais, Irina & Bo</p>
-</div>
->>>>>>> Stashed changes
+
 
   $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
       $(this).val('');

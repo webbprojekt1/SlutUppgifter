@@ -69,7 +69,7 @@ response.setContentType("text/html");
 			   bi=new BookInfo(name,email,dates[0],dates[1],message);
 			
 			session.setAttribute("bi", bi);
-			String url = "/test.jsp";
+			String url = "/result.jsp";
 			getServletContext().getRequestDispatcher(url).forward(request, response);
 		}else if("Confirm".equals(request.getParameter("submit"))){
 			if (session.getAttribute("bi")!=null){
