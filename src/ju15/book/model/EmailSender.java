@@ -45,7 +45,10 @@ public class EmailSender {
 
 			//Transport.send(message);
 			Transport transport=session.getTransport();
+
 			transport.connect("kais.ghedamsi@gmail.com", "kaisgh123" );
+
+
 			transport.sendMessage(message, message.getAllRecipients());
 			transport.close();
 

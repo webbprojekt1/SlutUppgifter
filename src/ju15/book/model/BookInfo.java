@@ -1,7 +1,11 @@
+/**
+ * Author:Bo Yang
+ */
 package ju15.book.model;
 
 public class BookInfo {
 
+	String itemnum;
 	String name;
 	String email;
 	String startDate;
@@ -10,13 +14,20 @@ public class BookInfo {
 	public BookInfo() {
 		
 	}
-	public BookInfo(String name, String email, String startDate, String endDate, String message) {
+	public BookInfo(String itemnum, String name, String email, String startDate, String endDate, String message) {
 		super();
+		this.itemnum=itemnum;
 		this.name = name;
 		this.email = email;
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.message = message;
+	}
+	public String getItemnum() {
+		return itemnum;
+	}
+	public void setItemnum(String itemnum) {
+		this.itemnum = itemnum;
 	}
 	public String getName() {
 		return name;
