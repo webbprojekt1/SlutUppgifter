@@ -13,6 +13,9 @@ p {font-family: 'Quicksand', sans-serif; color: black;}
 #header{ position: fixed; background-color: white; width: 100%; top: 0px; text-align: center; opacity: 0.4; border-bottom: 1px solid black;}
 #header img{ width: 20%;}
 
+
+
+
 /*
 |--------------------------------------------------------------------------
 |Titel / Kais ghedmasi
@@ -123,8 +126,16 @@ div.desc {
 | Form Action HTML / Kais Ghedamsi
 |--------------------------------------------------------------------------
 */
+.wrapper {}
+input[type=text], [type=email], select { width: 50%; padding: 12px 20px;  display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+							margin-left: 20px; margin-bottom: 10px;}
+							
+textarea { width: 50%; height: 50px; padding: 12px 20px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; 
+			background-color: #f8f8f8; font-size: 16px; resize: none; margin-left: 20px; margin-bottom: 20px;}
+			
+input[type=submit] { background-color: #FFC374; border: none; color: white; padding: 16px 32px; text-decoration: none; 
+					margin: 4px 2px; cursor: pointer; margin-left: 20px;}
 
-.form-action {}
 
 
 /*
