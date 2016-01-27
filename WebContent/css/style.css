@@ -11,7 +11,7 @@ body {margin: 0 auto;}
 			color: black !important;
 		}
 
-h1, h2 {font-family: 'Quicksand', sans-serif;}
+h1, h2, h3, h4, h5, h6 {font-family: 'Quicksand', sans-serif;}
 p {font-family: 'Quicksand', sans-serif; color: black;}
 
 
@@ -127,5 +127,12 @@ input[type=submit] { background-color: #FFC374; border: none; color: white; padd
 |--------------------------------------------------------------------------
 */
 #footer {background-color: black;  width: 100%; clear: both;
-    	position: relative; z-index: 10; height: 100px;; margin-top: 3em; opacity: 0.7; border-top: 1px solid grey;}
-#footer p{color: white; top: 50%; text-align: center;}
+    	position: relative; z-index: 10; height: 80px; margin-top: 3em;  border-top: 1px solid grey; opacity: 0.8}
+
+
+#contact-text h4{color: #FFC374; text-align: left; text-align: center;}
+
+
+
+
+

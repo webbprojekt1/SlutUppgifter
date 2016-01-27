@@ -64,16 +64,17 @@
 	<div class="wrapper-2">
 		<div class="form-action">
 		<h2>Contact information:</h2>
-			<input type="text" id="fullname" name="fullname" placeholder="Name"><br>
-			<input type="email" id="email" name="email" class="required" placeholder="Email"><br>
-			<input type="text" name="datefilterIN" value="" placeholder="Choose check-in date"><br>
-  			<input type="text" name="datefilterOUT" value="" placeholder="Choose check-out date"><br>
+			<input type="text" id="fullname" name="fullname" placeholder="Name">*<br>
+			<input type="email" id="email" name="email" class="required" placeholder="Email">*<br>
+			<input type="text" name="datefilterIN" value="" placeholder="Choose check-in date">*<br>
+  			<input type="text" name="datefilterOUT" value="" placeholder="Choose check-out date">*<br>
 			<textarea name="message" placeholder="Message"></textarea><br>
 			<input type="submit" name="submit" value="Book" id="booksubmit">
 
 			
 		</div>
 	</div>
+	
 	</form>
 	<!-- authur:Bo Yang -->
 	<script type="text/javascript" language="javascript">
@@ -189,10 +190,12 @@ $(document).ready(function(){
 	</script>
 
 
-	<!-- Author Kais Ghedamsi -->
-	<div id="footer">
-		<p>Posted By: Kais, Irina & Bo</p>
+<!-- Author Kais Ghedamsi -->
+<div id="footer">
+	<div id="contact-text">
+		<h4> Copyright BookingBird 2016</h4>
 	</div>
+</div>
 
 </body>
 </html>
