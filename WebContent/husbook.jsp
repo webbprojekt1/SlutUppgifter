@@ -64,11 +64,11 @@
 	<div class="wrapper-2">
 		<div class="form-action">
 		<h2>Contact information:</h2>
-			<input type="text" id="fullname" name="fullname" placeholder="Name">*<br>
-			<input type="email" id="email" name="email" class="required" placeholder="Email">*<br>
-			<input type="text" name="datefilterIN" value="" placeholder="Choose check-in date">*<br>
-  			<input type="text" name="datefilterOUT" value="" placeholder="Choose check-out date">*<br>
-			<textarea name="message" placeholder="Message"></textarea><br>
+			<input type="text" id="fullname" name="fullname" value="${bi.name}" placeholder="Name">*<br>
+			<input type="email" id="email" name="email" value="${bi.email}" class="required" placeholder="Email">*<br>
+			<input type="text" name="datefilterIN" value="${bi.startDate}" placeholder="Choose check-in date">*<br>
+  			<input type="text" name="datefilterOUT" value="${bi.endDate}" placeholder="Choose check-out date">*<br>
+			<textarea name="message" value="${bi.message}" placeholder="Message"></textarea><br>
 			<input type="submit" name="submit" value="Book" id="booksubmit">
 
 			

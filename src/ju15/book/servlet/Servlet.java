@@ -48,7 +48,7 @@ public class Servlet extends HttpServlet {
 			String dateOUT = request.getParameter("datefilterOUT");
 
 			String message = request.getParameter("message");
-			if (message == null)
+			if (message == "")
 				message = "You didn't leave any message.";
 
 			bi = new BookInfo(pic, name, email, date, dateOUT, message);
@@ -61,9 +61,12 @@ public class Servlet extends HttpServlet {
 				bi = (BookInfo) session.getAttribute("bi");
 				try {
 					EmailSender.sendMail(bi);
+					session.invalidate();
+					session=request.getSession();
 					String url = "/thanks.html";
 					getServletContext().getRequestDispatcher(url).forward(request, response);
 				} catch (Exception e) {
+					
 					String url = "/error.jsp";
 					getServletContext().getRequestDispatcher(url).forward(request, response);
 				}

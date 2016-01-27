@@ -8,6 +8,6 @@
 </head>
 <body>
 <h1>Failed to send email. Please try again.</h1>
-<a href="index.html" title="Back to the Home page"><b>HOME</b></a>
+<a href="husbook.jsp" title="Back to the Home page"><b>back</b></a>
 </body>
 </html>
