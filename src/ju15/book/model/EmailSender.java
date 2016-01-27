@@ -1,3 +1,6 @@
+/**
+ * Author:Bo Yang
+ */
 package ju15.book.model;
 
 import java.io.UnsupportedEncodingException;
@@ -45,7 +48,7 @@ public class EmailSender {
 			message.setFrom(new InternetAddress(bi.getEmail()));
 			message.setRecipient(Message.RecipientType.TO,
 
-					new InternetAddress("mixeyko@gmail.com"));
+					new InternetAddress("youthbo@gmail.com"));
 
 					
 
@@ -55,7 +58,7 @@ public class EmailSender {
 			Transport transport=session.getTransport();
 
 
-			transport.connect("mixeyko@gmail.com", "xxxxxx");
+			transport.connect("youthbo@gmail.com", "*****");
 
 			//transport.connect("myemail","mypassword" );
 

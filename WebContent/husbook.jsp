@@ -76,85 +76,16 @@
 	</div>
 	
 	</form>
-	<!-- authur:Bo Yang -->
-	<script type="text/javascript" language="javascript">
-	<!-- Author:Irina Fatkoulin -->
-	var dates;
-	//var dates = ['2016-01-05', '2016-01-27'];
-	function loadDate(){
-	
-	 var xhttp = new XMLHttpRequest();
-	 xhttp.onreadystatechange = function(){
-		 if(xhttp.readyState == 4 && xhttp.status == 200){
-			 
-			dates =
-				  xhttp.responseText;
-			//disableDates(txt);
-			
-		 }
-	 };
-	 xhttp.open("POST", "Reader", true);
-	 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	 xhttp.send("bild=${house.name}");
-}
 
-	
-
-
-function disableDates(date){
-	var y = date.getFullYear().toString(); // get full year
-	var m = (date.getMonth() + 1).toString(); // get month.
-	var d = date.getDate().toString(); // get Day
-	if(m.length == 1){ m = '0' + m; } // append zero(0) if single digit
-	if(d.length == 1){ d = '0' + d; } // append zero(0) if single digit
-	var currDate = y+'-'+m+'-'+d;
-	if(dates.indexOf(currDate) >= 0){
-		return [false, "ui-highlight", "NOT AVAILABLE"];	
-	}else{
-		return [true,"ui-highlight1"];
-	}					
-}
-
-
-
-
-
-
-$(document).ready(function(){
-	$('input[name="datefilterIN"]').datepicker({
-		minDate:0,
-		beforeShowDay : disableDates,
-		onClose: function( selectedDate ) {
-			var date2 = $('input[name="datefilterIN"]').datepicker('getDate');
-			var nextDayDate = new Date();
-			nextDayDate.setDate(date2.getDate() + 1);
-			
-	        $( 'input[name="datefilterOUT"]' ).datepicker( "option", "minDate", nextDayDate );
-	      }
-	
-	});
-
-	
-	
-		$('input[name="datefilterOUT"]').datepicker({
-			minDate:0,
-			beforeShowDay : disableDates,
-			onClose: function( selectedDate ) {
-		        $( 'input[name="datefilterIN"]' ).datepicker( "option", "maxDate", selectedDate );
-		      }
-			
-		});
-	});
+	<script type="text/javascript">
 		
-		
-
-  /**Author: Bo Yang **/
-  
+	    /**Author: Bo Yang **/
 		function validate(form) {
 			var returnValue = true;
 			var fullname = bookform.fullname.value;
 			var email = bookform.email.value;
-			var date = bookform.datefilter.value;
+			var date = bookform.datefilterIN.value;
+			var dateOUT = bookform.datefilterOUT.value;
 			//test name length
 			if (fullname.length < 5) {
 				returnValue = false;
@@ -181,14 +112,83 @@ $(document).ready(function(){
 				bookform.datefilterIN.focus();
 			} else if (dateOUT.length == 0) {
 				returnValue = false;
-				alert("Please choose check-out date");
-				bookform.datefilterOUT.focus();
-				
+				alert("Please choose check-in date");
+				bookform.datefilterIN.focus();
 			}
 			return returnValue;
 		}
-	</script>
+	
+		/**
+		 *  Author:Irina
+		 **/
+		var dates;
+		//var dates = ['2016-01-05', '2016-01-27'];
+		function loadDate() {
 
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+
+					dates = xhttp.responseText;
+					//disableDates(txt);
+
+				}
+			};
+			xhttp.open("POST", "Reader", true);
+			xhttp.setRequestHeader("Content-type",
+					"application/x-www-form-urlencoded");
+			xhttp.send("bild=${house.name}");
+		}
+
+		function disableDates(date) {
+			var y = date.getFullYear().toString(); // get full year
+			var m = (date.getMonth() + 1).toString(); // get month.
+			var d = date.getDate().toString(); // get Day
+			if (m.length == 1) {
+				m = '0' + m;
+			} // append zero(0) if single digit
+			if (d.length == 1) {
+				d = '0' + d;
+			} // append zero(0) if single digit
+			var currDate = y + '-' + m + '-' + d;
+			if (dates.indexOf(currDate) >= 0) {
+				return [ false, "ui-highlight", "NOT AVAILABLE" ];
+			} else {
+				return [ true, "ui-highlight1" ];
+			}
+		}
+
+		$(document).ready(
+				function() {
+					$('input[name="datefilterIN"]').datepicker(
+							{
+								minDate : 0,
+								beforeShowDay : disableDates,
+								onClose : function(selectedDate) {
+									var date2 = $('input[name="datefilterIN"]')
+											.datepicker('getDate');
+									var nextDayDate = new Date();
+									nextDayDate.setDate(date2.getDate() + 1);
+
+									$('input[name="datefilterOUT"]')
+											.datepicker("option", "minDate",
+													nextDayDate);
+								}
+
+							});
+
+					$('input[name="datefilterOUT"]').datepicker(
+							{
+								minDate : 0,
+								beforeShowDay : disableDates,
+								onClose : function(selectedDate) {
+									$('input[name="datefilterIN"]').datepicker(
+											"option", "maxDate", selectedDate);
+								}
+
+							});
+				});
+	</script>
 
 <!-- Author Kais Ghedamsi -->
 <div id="footer">
