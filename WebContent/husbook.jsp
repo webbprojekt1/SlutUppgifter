@@ -63,16 +63,13 @@
 
 	<div class="wrapper-2">
 		<div class="form-action">
-
-			Name:<input type="text" id="fullname" name="fullname" /><br>
-			Email:<input type="email" id="email" name="email" class="required" /><br>
-			Choose check-in date: 
-			<input type="text" name="datefilterIN" value="" /><br>
-			Choose check-out date:
-  			<input type="text" name="datefilterOUT" value="" /><br>
-			Message:
-			<textarea name="message"></textarea>
-			<input type="submit" name="submit" value="Book" id="booksubmit" />
+		<h2>Contact information:</h2>
+			<input type="text" id="fullname" name="fullname" placeholder="Name"><br>
+			<input type="email" id="email" name="email" class="required" placeholder="Email"><br>
+			<input type="text" name="datefilterIN" value="" placeholder="Choose check-in date"><br>
+  			<input type="text" name="datefilterOUT" value="" placeholder="Choose check-out date"><br>
+			<textarea name="message" placeholder="Message"></textarea><br>
+			<input type="submit" name="submit" value="Book" id="booksubmit">
 
 			
 		</div>

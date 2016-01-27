@@ -103,9 +103,9 @@ div.desc { padding: 15px; text-align: center;}
 */
 .wrapper-2{ width: 1024px; margin-left:auto; margin-right: auto; padding-right: 50px;} 
 input[type=text], [type=email], select { width: 50%; padding: 12px 20px;  display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
-							margin-left: 20px; margin-bottom: 10px;}
+							 margin-bottom: 10px;}
 							
-textarea { padding: 12px 20px; margin: 8px 0; box-sizing: border-box;border: 2px solid red; border-radius: 4px;}
+textarea { padding: 12px 20px; margin: 8px 0; box-sizing: border-box;border: 2px solid red; border-radius: 4px; width: 50%; height: 100px;}
 			
 input[type=submit] { background-color: #FFC374; border: none; color: white; padding: 16px 32px; text-decoration: none; 
 				margin: 4px 2px; cursor: pointer; }
@@ -126,6 +126,6 @@ input[type=submit] { background-color: #FFC374; border: none; color: white; padd
 | Footer / Kais Ghedamsi
 |--------------------------------------------------------------------------
 */
-#footer {background-color: white; color: black; width: 100%; text-align: center; clear: both;
-    	position: relative; z-index: 10; height: 3em; margin-top: 3em; opacity: 0.7; }
-#footer {border-top: 1px solid grey; }
+#footer {background-color: black;  width: 100%; clear: both;
+    	position: relative; z-index: 10; height: 100px;; margin-top: 3em; opacity: 0.7; border-top: 1px solid grey;}
+#footer p{color: white; top: 50%; text-align: center;}
