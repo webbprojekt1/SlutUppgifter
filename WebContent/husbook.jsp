@@ -15,10 +15,10 @@
 <meta charset="UTF-8">
 <title>Booking</title>
 </head>
-<body>
-	<!-- Author Kais Ghedamsi -->
+<body id="housebookbody">
 
-	<div id="header">
+	<!-- Author Kais Ghedamsi -->
+	<div id="header-1">
 		<h1>BookingBird</h1>
 	</div>
 <form id="bookform" method="get" target="_self" action="Servlet" onsubmit="return validate(this)"
@@ -31,10 +31,11 @@
 		</div>
 
 
-		<div class="img-two">
+		<div class="img-one">
 			<img src="${house.url}" alt="${house.url}" width="400" height="200" id="main-pic"/>
 			<input type="hidden" name="bild" value="florida">
 		</div>
+		
         <div class="img-two">
           <table id="picstable">
             <tr class="more-pics">
@@ -52,15 +53,16 @@
 		</div>
 	</div>
 
-	<div class="wrapper">
+	<div class="wrapper-2">
 		<div class="form-action">
 
-			Name:<input type="text" id="fullname" name="fullname" /><br>
-			Email:<input type="email" id="email" name="email" class="required" /><br>
-			Choose the period: <input type="text" name="datefilter" value="" /><br>
-			Message:
-			<textarea name="message"></textarea>
-			<input type="submit" name="submit" value="Book" id="booksubmit" />
+			<p>Name:</p><input type="text" id="fullname" name="fullname"><br>
+			<p>Email:</p><input type="email" id="email" name="email" class="required"><br>
+			<p>Date:</p> <input type="text" name="datefilter" value="">
+			<p>Message:</p>
+			<textarea name="message"></textarea><br>
+			
+			<input type="submit" name="submit" value="Book" id="booksubmit">
 			
 		</div>
 	</div>

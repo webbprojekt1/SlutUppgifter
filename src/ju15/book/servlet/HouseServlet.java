@@ -1,5 +1,5 @@
 /**
- * Author: Bo Yang
+ * Author: Bo Yang & Kais Ghedamsi
  */
 
 package ju15.book.servlet;
@@ -37,7 +37,7 @@ public class HouseServlet extends HttpServlet {
     	 Mallorca=new House("Mallorca","img/bild6.jpg","Mallorca");
     	 Florida=new House("Florida","img/bild2.jpg","Lorem ipsum dolor sit amet,"
     	 		+ " eos id wisi noluisse voluptatum, ornatus volumus ei usu. Sumo scripta sed ne, ad novum iuvaret eos, ceteros omnesque ponderum usu at. Sed novum mediocrem democritum et, mucius nemore mea id. Dolore platonem est ea, qui te regione integre, quod debitis sit id. Nec in ipsum mucius docendi, vero voluptatibus concludaturque per eu, probo clita adolescens quo te.");
-    	 ibiza=new House("Ibiza","img/bild3.jpg","Ibiza");
+    	 ibiza=new House("Ibiza","img/bild3.jpg","Lorem ipsum Sumo scripta sed ne ad novum iuvaret eos Sumo scripta sed ne, ad novum iuvaret eos,  Sumo scripta sed ne, ad novum iuvaret eos,  Sumo scripta sed ne, ad novum iuvaret eos, ");
     	 croatia=new House("Croatia","img/bild4.jpg","Croatia");
     	 houses=new ArrayList<House>();
          houses.add(Mallorca);
@@ -64,7 +64,7 @@ public class HouseServlet extends HttpServlet {
 				break;
 			}
 		}
-		String path=sc.getRealPath("/Web-INF/"+bild+".txt");
+		String path=sc.getRealPath("/WEB-INF/"+bild+".txt");
 		//System.out.println(path);
 		ArrayList<String> pics=ReadPics.getPics(path);
 		session.setAttribute("pics", pics);

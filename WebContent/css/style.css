@@ -11,6 +11,7 @@ p {font-family: 'Quicksand', sans-serif; color: black;}
 */
 
 #header{ position: fixed; background-color: white; width: 100%; top: 0px; text-align: center; opacity: 0.4; border-bottom: 1px solid black;}
+#header-1{ position: absolute; background-color: white; width: 100%; top: 0px; text-align: center; opacity: 0.4; border-bottom: 1px solid black;}
 #header img{ width: 20%;}
 
 
@@ -43,100 +44,71 @@ p {font-family: 'Quicksand', sans-serif; color: black;}
 |--------------------------------------------------------------------------
 */
 
-div.img {
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
-}
+div.img { border: 1px solid #ccc; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
 
-div.img:hover {
-    border: 1px solid #777;
-}
+div.img:hover { border: 1px solid #777;}
 
-div.img img {
-    width: 100%;
-    height: auto;
-}
+div.img img { width: 100%; height: auto;}
 
-div.desc {
-    padding: 15px;
-    text-align: center;
-}
+div.desc { padding: 15px; text-align: center;}
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box;}
 
 .responsive { padding: 0 6px; float: left; width: 24.99999%; height: auto; margin-bottom: 50px;}
 
 @media only screen and (max-width: 700px){
-    .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
-    }
+    .responsive { width: 49.99999%; margin: 6px 0;}
 }
 
 @media only screen and (max-width: 500px){
-    .responsive {
-        width: 100%;
-    }
+    .responsive { width: 100%;}
 }
 
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+.clearfix:after { content: ""; display: table; clear: both;}
 
 /*
 |--------------------------------------------------------------------------
-| Second HTML / Kais Ghedamsi
+| HusBook JSP / Kais Ghedamsi
 |--------------------------------------------------------------------------
 */
-
+#housebookbody {background-image: url("../img/bg2.jpg"); width: 100%}
 .wrapper { width: 1024px; /*margin: auto 0;*/ margin-left:auto; margin-right: auto; margin-top: 80px;}
-#titel-1 h1{margin-left: 50px;}
-#titel-1 hr{width: 80px; margin-left: 50px; border-style: solid; border-color: #FFC374; height: 2px; }
-#titel-2 h2{margin-left: 50px;}
-.img-two {margin-left: 50px; magrin-top: 50px;}
-#text-1 {margin-left: 50px; border: 1px solid black; padding: 10px; width: 400px; height: 200px; text-align: justify; } 
+#titel-1 hr{width: 80px; border-style: solid; border-color: #FFC374; height: 2px; margin-left: 10px;}
+#text-1 { border: 1px solid black; padding: 10px; width: 400px; height: 200px; text-align: justify; margin-bottom: 20px;} 
 
 /*
 |--------------------------------------------------------------------------
-| Carousel / Kais Ghedamsi
+| IMG - 1,2 / Kais Ghedamsi
 |--------------------------------------------------------------------------
 */
-.carousel-inner > .item > img,
-.carousel-inner > .item > a { width: 50%; margin: auto;}
-.carousel-inner img {width: auto; }
+.img-one { margin-bottom: 20px;}
+.more-pics td, th{ padding: 0 10px 0 0; }
 
-  
-.carousel-control {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;	
-    font-size: 20px;
-    color: #fff;
-    text-align: center;
-}
 
 /*
 |--------------------------------------------------------------------------
 | Form Action HTML / Kais Ghedamsi
 |--------------------------------------------------------------------------
 */
-.wrapper {}
+.wrapper-2{ width: 1024px; margin-left:auto; margin-right: auto; padding-right: 50px;} 
 input[type=text], [type=email], select { width: 50%; padding: 12px 20px;  display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
 							margin-left: 20px; margin-bottom: 10px;}
 							
-textarea { width: 50%; height: 50px; padding: 12px 20px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; 
-			background-color: #f8f8f8; font-size: 16px; resize: none; margin-left: 20px; margin-bottom: 20px;}
+textarea { padding: 12px 20px; margin: 8px 0; box-sizing: border-box;border: 2px solid red; border-radius: 4px;}
 			
 input[type=submit] { background-color: #FFC374; border: none; color: white; padding: 16px 32px; text-decoration: none; 
-					margin: 4px 2px; cursor: pointer; margin-left: 20px;}
+				margin: 4px 2px; cursor: pointer; }
 
-
+/*
+|--------------------------------------------------------------------------
+| Thanks HTML / Kais Ghedamsi
+|--------------------------------------------------------------------------
+*/
+.wrapper-3 {width: 1024px; margin-left:auto; margin-right: auto; padding-left: 50px; position: center center;}
+#thanksbg {background-image: url("../img/bg1.jpg"); background-position: cover;}
+#title-10 h2{color: white;}
+#home-button input[type=submit] { background-color: #FFC374; border: none; color: white; padding: 16px 32px; text-decoration: none; margin: 4px 2px; 
+							cursor: pointer; position: center;}
 
 /*
 |--------------------------------------------------------------------------
