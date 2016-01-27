@@ -1,5 +1,16 @@
 body {margin: 0 auto;}
 
+.ui-highlight .ui-state-default{
+			background: red !important;
+			border-color: red !important;
+			color: white !important;
+		}
+.ui-highlight1 .ui-state-default{
+			background: green !important;
+			border-color: green !important;
+			color: black !important;
+		}
+
 h1, h2 {font-family: 'Quicksand', sans-serif;}
 p {font-family: 'Quicksand', sans-serif; color: black;}
 

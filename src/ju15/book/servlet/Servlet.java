@@ -60,14 +60,19 @@ response.setContentType("text/html");
 		BookInfo bi=null;
 		//request.getParameter("submit")
 		if ("Book".equals(request.getParameter("submit"))){
-			String pic=request.getParameter("bild");
+
+			String pic = request.getParameter("bild");
+
 			String name=request.getParameter("fullname");
 			String email=request.getParameter("email");
-			String date=request.getParameter("datefilter");
-			String[] dates = date.split(" - ");
+			String date=request.getParameter("datefilterIN");
+			String dateOUT=request.getParameter("datefilterOUT");
+			
 			String message=request.getParameter("message");
 			if (message==null) message="You didn't leave any message.";
-			   bi=new BookInfo(pic,name,email,dates[0],dates[1],message);
+
+			   bi=new BookInfo(pic, name,email,date,dateOUT,message);
+
 			
 			session.setAttribute("bi", bi);
 			String url = "/result.jsp";

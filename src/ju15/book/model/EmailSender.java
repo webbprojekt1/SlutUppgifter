@@ -25,7 +25,11 @@ public class EmailSender {
 //		Session session = Session.getDefaultInstance(props,
 //			new javax.mail.Authenticator() {
 //				protected PasswordAuthentication getPasswordAuthentication() {
+
+//					return new PasswordAuthentication();
+
 //					return new PasswordAuthentication("youthbo",);
+
 //				}
 //			});
 		Session session=Session.getDefaultInstance(props);
@@ -40,13 +44,23 @@ public class EmailSender {
 			                +" to "+bi.getEndDate()+"\n"+bi.getMessage());
 			message.setFrom(new InternetAddress(bi.getEmail()));
 			message.setRecipient(Message.RecipientType.TO,
-					new InternetAddress("kais.ghedamsi@gmail.com"));
+
+					new InternetAddress("mixeyko@gmail.com"));
+
+					
+
 			
 
 			//Transport.send(message);
 			Transport transport=session.getTransport();
 
-			transport.connect("kais.ghedamsi@gmail.com", "kaisgh123" );
+
+			transport.connect("mixeyko@gmail.com", "xxxxxx");
+
+			//transport.connect("myemail","mypassword" );
+
+			
+
 
 
 			transport.sendMessage(message, message.getAllRecipients());

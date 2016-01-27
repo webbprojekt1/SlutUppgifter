@@ -53,7 +53,7 @@ public class HouseServlet extends HttpServlet {
 		ServletContext sc = getServletContext();
 		String bild=request.getParameter("bild");
 		HttpSession session=request.getSession();
-		//System.out.println("bild is "+bild);
+		System.out.println("bild is "+bild);
 		House house=null;
 		for (int i=0;i<houses.size();i++){
 			if (houses.get(i).getName().equals(bild)){
@@ -65,7 +65,11 @@ public class HouseServlet extends HttpServlet {
 			}
 		}
 		String path=sc.getRealPath("/WEB-INF/"+bild+".txt");
+
 		//System.out.println(path);
+
+		System.out.println(path);
+
 		ArrayList<String> pics=ReadPics.getPics(path);
 		session.setAttribute("pics", pics);
 		String url = "/husbook.jsp";
