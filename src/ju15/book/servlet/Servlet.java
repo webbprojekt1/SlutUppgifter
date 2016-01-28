@@ -41,7 +41,6 @@ public class Servlet extends HttpServlet {
 		if ("Book".equals(request.getParameter("submit"))) {
 
 			String pic = request.getParameter("bild");
-
 			String name = request.getParameter("fullname");
 			String email = request.getParameter("email");
 			String date = request.getParameter("datefilterIN");

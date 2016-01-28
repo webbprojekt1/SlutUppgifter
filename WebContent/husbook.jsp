@@ -21,7 +21,7 @@
 
 <body id="housebookbody">
 
-<body onload = "loadDate()">
+<body onload = "loadDate(); loadSistaComment()">
 
 
 	<!-- Author Kais Ghedamsi -->
@@ -40,7 +40,7 @@
 
 
 		<div class="img-one">
-			<img src="${house.url}" alt="${house.url}" width="400" height="200" id="main-pic"/>
+			<img src="${house.url}" alt="${house.url}" width="100" height="100" id="main-pic"/>
 			<input type="hidden" name="bild" value="${house.name}">
 		</div>
 		
@@ -64,6 +64,7 @@
 	<div class="wrapper-2">
 		<div class="form-action">
 		<h2>Contact information:</h2>
+		
 			<input type="text" id="fullname" name="fullname" value="${bi.name}" placeholder="Name" required>*<br>
 			<input type="email" id="email" name="email" value="${bi.email}" placeholder="Email" required>*<br>
 			<input type="text" name="datefilterIN" value="${bi.startDate}" placeholder="Choose check-in date" required>*<br>
@@ -76,6 +77,23 @@
 	</div>
 	
 	</form>
+	<!-- Irina Fatkoulin -->
+	<div>
+		<h3 >Guest reviews</h3>
+		<div id = "feedback"></div>
+			<button type = "button"  onmouseover  = "loadDoc()" onmouseout = "clean()" >Read all reviews
+			</button>
+			<div id="all" onmouseover  = "loadDoc()" onmouseout = "clean()" ></div>
+			
+	</div>
+
+	<div>
+		<form name="commentForm" method="post" action="SparaComment"> 
+		<textarea rows="5" cols="30" name="feedback" placeholder="Write feedback:"></textarea>
+  		<input type="hidden" name="nameOfHouse" id="nameOfHouse" value = "${house.name}" />
+  		<input type="submit" onclick="loadSistaComment()" value="Add" />
+		</form>
+	</div>
 
 	<script type="text/javascript">
 		
@@ -119,7 +137,7 @@
 		}
 	
 		/**
-		 *  Author:Irina
+		 *  Author:Irina Fatkoulin
 		 **/
 		var dates;
 		//var dates = ['2016-01-05', '2016-01-27'];
@@ -169,6 +187,7 @@
 											.datepicker('getDate');
 									var nextDayDate = new Date();
 									nextDayDate.setDate(date2.getDate() + 1);
+									nextDayDate.setMonth(date2.getMonth());
 
 									$('input[name="datefilterOUT"]')
 											.datepicker("option", "minDate",
@@ -188,6 +207,44 @@
 
 							});
 				});
+		
+		
+		 
+		 function loadSistaComment(){
+			
+			 var xhttp = new XMLHttpRequest();
+			 xhttp.onreadystatechange = function(){
+				 if(xhttp.readyState == 4 && xhttp.status == 200){
+					 document.getElementById("feedback").innerHTML =
+						 xhttp.responseText;
+					 
+				 }
+			 };
+			 xhttp.open("POST", "ReadSistaComment", true);
+			 xhttp.setRequestHeader("Content-type",
+				"application/x-www-form-urlencoded");
+		xhttp.send("bild=${house.name}");
+		 }
+		 
+		 function loadDoc(){
+				
+			 var xhttp = new XMLHttpRequest();
+			 xhttp.onreadystatechange = function(){
+				 if(xhttp.readyState == 4 && xhttp.status == 200){
+					 document.getElementById("all").innerHTML =
+						 xhttp.responseText;
+					  }
+			 };
+			 xhttp.open("POST", "ReadFeedback", true);
+			 
+			 xhttp.setRequestHeader("Content-type",
+				"application/x-www-form-urlencoded");
+		xhttp.send("bild=${house.name}");
+		 }
+		function  clean(){
+			document.getElementById("all").innerHTML = "";
+		}
+		
 	</script>
 
 <!-- Author Kais Ghedamsi -->

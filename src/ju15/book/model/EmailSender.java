@@ -43,12 +43,12 @@ public class EmailSender {
 			//change security access https://www.google.com/settings/security/lesssecureapps
 			Message message = new MimeMessage(session);
 			message.setSubject("New booking");
-			message.setText(bi.getName()+":"+"\n"+bi.getEmail()+"\n"+"From "+bi.getStartDate()
+			message.setText(bi.getItemnum()+"\n"+bi.getName()+":"+"\n"+bi.getEmail()+"\n"+"From "+bi.getStartDate()
 			                +" to "+bi.getEndDate()+"\n"+bi.getMessage());
 			message.setFrom(new InternetAddress(bi.getEmail()));
 			message.setRecipient(Message.RecipientType.TO,
 
-					new InternetAddress("youthbo@gmail.com"));
+					new InternetAddress("irina.fatkoulin@gmail.com"));
 
 					
 
@@ -58,7 +58,7 @@ public class EmailSender {
 			Transport transport=session.getTransport();
 
 
-			transport.connect("youthbo@gmail.com", "*****");
+			transport.connect("irina.fatkoulin@gmail.com", "plushogskolan");
 
 			//transport.connect("myemail","mypassword" );
 

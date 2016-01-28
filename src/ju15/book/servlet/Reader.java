@@ -1,3 +1,7 @@
+/**
+ * Author:Irina Fatkoulin
+ */
+
 package ju15.book.servlet;
 
 import java.io.BufferedReader;

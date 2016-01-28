@@ -9,7 +9,7 @@
  
 </head>
 <body>
- 
+ <p>Your house is: ${bi.itemnum}</p>
  <p>Your name is: ${bi.name}</p>
  <p>Your email is: ${bi.email}</p>
  <p>Check-in date is: ${bi.startDate}</p>

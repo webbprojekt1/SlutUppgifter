@@ -1,5 +1,9 @@
 body {margin: 0 auto;}
-
+/*
+|--------------------------------------------------------------------------
+|datepicker / Irina Fatkoulin
+|--------------------------------------------------------------------------
+*/
 .ui-highlight .ui-state-default{
 			background: red !important;
 			border-color: red !important;
@@ -10,6 +14,34 @@ body {margin: 0 auto;}
 			border-color: green !important;
 			color: black !important;
 		}
+/*
+|--------------------------------------------------------------------------
+|Comment form / Irina Fatkoulin
+|--------------------------------------------------------------------------
+*/		
+#feedback {
+    
+    
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-x: hidden;
+    width: 270px;
+    height:auto;
+}
+#all {
+    
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-x: hidden;
+    width: 350px;
+    max-height:100px;
+    min-height: auto;
+}
+/*
+|--------------------------------------------------------------------------
+|Header / Kais ghedmasi
+|--------------------------------------------------------------------------
+*/
 
 h1, h2, h3, h4, h5, h6 {font-family: 'Quicksand', sans-serif;}
 p {font-family: 'Quicksand', sans-serif; color: black;}
@@ -105,7 +137,7 @@ div.desc { padding: 15px; text-align: center;}
 input[type=text], [type=email], select { width: 50%; padding: 12px 20px;  display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
 							 margin-bottom: 10px;}
 							
-textarea { padding: 12px 20px; margin: 8px 0; box-sizing: border-box;border: 2px solid red; border-radius: 4px; width: 50%; height: 100px;}
+textarea { padding: 12px 20px; margin: 8px 0; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; width: 50%; height: 100px;}
 			
 input[type=submit] { background-color: #FFC374; border: none; color: white; padding: 16px 32px; text-decoration: none; 
 				margin: 4px 2px; cursor: pointer; }

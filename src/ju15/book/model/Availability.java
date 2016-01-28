@@ -1,3 +1,7 @@
+/**
+ * Author:Irina Fatkoulin
+ */
+
 package ju15.book.model;
 
 import java.time.LocalDate;
