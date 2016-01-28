@@ -1,4 +1,5 @@
 body {margin: 0 auto;}
+
 /*
 |--------------------------------------------------------------------------
 |datepicker / Irina Fatkoulin
@@ -20,7 +21,6 @@ body {margin: 0 auto;}
 |--------------------------------------------------------------------------
 */		
 #feedback {
-    
     
     padding-left: 10px;
     padding-right: 10px;
@@ -115,9 +115,9 @@ div.desc { padding: 15px; text-align: center;}
 |--------------------------------------------------------------------------
 */
 #housebookbody {background-image: url("../img/bg2.jpg"); width: 100%}
-.wrapper { width: 1024px; /*margin: auto 0;*/ margin-left:auto; margin-right: auto; margin-top: 80px;}
-#titel-1 hr{width: 80px; border-style: solid; border-color: #FFC374; height: 2px; margin-left: 10px;}
-#text-1 { border: 1px solid black; padding: 10px; width: 400px; height: 200px; text-align: justify; margin-bottom: 20px;} 
+.wrapper {  /*margin: auto 0;*/ margin-left: 100px;; margin-right: auto; margin-top: 80px; }
+#titel-1 hr{width: 80px; color: #FFC374; margin-left: 0px; border: 1px solid;}
+#description { border: 1px solid black; padding: 10px; width: 650px; height: 200px; text-align: justify; margin-bottom: 20px;} 
 
 /*
 |--------------------------------------------------------------------------
@@ -125,7 +125,8 @@ div.desc { padding: 15px; text-align: center;}
 |--------------------------------------------------------------------------
 */
 .img-one { margin-bottom: 20px;}
-.more-pics td, th{ padding: 0 10px 0 0; }
+.img-two { margin-bottom: 20px;}
+.more-pics td, th{ padding: 0 25px 0 0; }
 
 
 /*
@@ -133,14 +134,25 @@ div.desc { padding: 15px; text-align: center;}
 | Form Action HTML / Kais Ghedamsi
 |--------------------------------------------------------------------------
 */
-.wrapper-2{ width: 1024px; margin-left:auto; margin-right: auto; padding-right: 50px;} 
-input[type=text], [type=email], select { width: 50%; padding: 12px 20px;  display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+.wrapper-2{ margin-left:100px; margin-right: auto; padding-right: 50px;} 
+input[type=text], [type=email], select { width: 40%; padding: 12px 20px;  display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
 							 margin-bottom: 10px;}
 							
-textarea { padding: 12px 20px; margin: 8px 0; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; width: 50%; height: 100px;}
+textarea { padding: 12px 20px; margin: 8px 0; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; width: 40%; height: 100px;}
 			
 input[type=submit] { background-color: #FFC374; border: none; color: white; padding: 16px 32px; text-decoration: none; 
-				margin: 4px 2px; cursor: pointer; }
+					margin: 4px 2px; cursor: pointer; }
+					
+/*
+|--------------------------------------------------------------------------
+| Form Review / Kais Ghedamsi
+|--------------------------------------------------------------------------
+*/
+
+.wrapper-review {float: right; margin-top: -620px; margin-right: 150px;}
+#feedback textarea{width: 250px;}
+#guest-review  hr{ width: 80px; color: #FFC374; border: 1px solid; margin-left:5px;  }
+#form-review {}
 
 /*
 |--------------------------------------------------------------------------
@@ -159,10 +171,10 @@ input[type=submit] { background-color: #FFC374; border: none; color: white; padd
 |--------------------------------------------------------------------------
 */
 #footer {background-color: black;  width: 100%; clear: both;
-    	position: relative; z-index: 10; height: 80px; margin-top: 3em;  border-top: 1px solid grey; opacity: 0.8}
+    	position: relative; z-index: 10; height: 80px; margin-top: 3em;  border-top: 1px solid grey; opacity: 0.8; padding-top: 10px;}
 
 
-#contact-text h4{color: #FFC374; text-align: center;}
+#contact-text h4{color: #FFC374; text-align: center; paddind-top: 10px;}
 
 
 
