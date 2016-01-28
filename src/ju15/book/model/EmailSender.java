@@ -49,8 +49,10 @@ public class EmailSender {
 			message.setRecipient(Message.RecipientType.TO,
 
 					new InternetAddress("irina.fatkoulin@gmail.com"));
-
-					
+//			String address = "youthbo@gmail.com,"+bi.getEmail();
+//			System.out.println(address);
+//			InternetAddress[] iAdressArray = InternetAddress.parse(address);
+//			message.setRecipients(Message.RecipientType.TO, iAdressArray);	
 
 			
 

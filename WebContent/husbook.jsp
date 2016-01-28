@@ -28,9 +28,6 @@
 	<div id="header-1">
 		<h1>BookingBird</h1>
 	</div>
-	
-<form id="bookform" method="get" target="_self" action="Servlet" onsubmit="return validate(this)"
-		accept-charset="UTF-8">
 		
 	<div class="wrapper">
 		<div id="titel-1">
@@ -60,23 +57,7 @@
 			<div id="text-1">${house.description} </div>
 		</div>
 	</div>
-
-	<div class="wrapper-2">
-		<div class="form-action">
-		<h2>Contact information:</h2>
-		
-			<input type="text" id="fullname" name="fullname" value="${bi.name}" placeholder="Name" required>*<br>
-			<input type="email" id="email" name="email" value="${bi.email}" placeholder="Email" required>*<br>
-			<input type="text" name="datefilterIN" value="${bi.startDate}" placeholder="Choose check-in date" required>*<br>
-  			<input type="text" name="datefilterOUT" value="${bi.endDate}" placeholder="Choose check-out date" required>*<br>
-			<textarea name="message" value="${bi.message}" placeholder="Message"></textarea><br>
-			<input type="submit" name="submit" value="Book" id="booksubmit">
-
-			
-		</div>
-	</div>
 	
-	</form>
 	<!-- Irina Fatkoulin -->
 	<div>
 		<h3 >Guest reviews</h3>
@@ -94,9 +75,28 @@
   		<input type="submit" onclick="loadSistaComment()" value="Add" />
 		</form>
 	</div>
+    <form id="bookform" method="get" target="_self" action="Servlet" onsubmit="return validate(this)"
+		accept-charset="UTF-8">
+	<div class="wrapper-2">
+		<div class="form-action">
+		<h2>Contact information:</h2>
+		    <input type="hidden" name="bild" value="${house.name}">
+			<input type="text" id="fullname" name="fullname" value="${bi.name}" placeholder="Name" required>*<br>
+			<input type="email" id="email" name="email" value="${bi.email}" placeholder="Email" required>*<br>
+			<input type="text" name="datefilterIN" value="${bi.startDate}" placeholder="Choose check-in date" required>*<br>
+  			<input type="text" name="datefilterOUT" value="${bi.endDate}" placeholder="Choose check-out date" required>*<br>
+			<textarea name="message" value="${bi.message}" placeholder="Message"></textarea><br>
+			<input type="submit" name="submit" value="Book" id="booksubmit">
+
+			
+		</div>
+	</div>
+	
+	</form>
+	
 
 	<script type="text/javascript">
-		
+	var dates;
 	    /**Author: Bo Yang **/
 		function validate(form) {
 			var returnValue = true;
@@ -132,6 +132,21 @@
 				returnValue = false;
 				alert("Please choose check-in date");
 				bookform.datefilterIN.focus();
+			};
+			dates=dates.substring(1,dates.length-3);
+			dates=dates.replace(/'/g,"");
+			var arr=dates.split(",");
+			for(i=0;i<arr.length;i++){
+				var date1=new Date(arr[i]);
+				//alert(arr[i]);
+				var date2=new Date(date);
+				//alert(date2);
+				var date3=new Date(dateOUT);
+				if (((date1>date2)&&(date1<date3))||(date1==date2)||(date1==date3)){
+					returnValue = false;
+					alert("Some dates you have chosen is not available.Please choose another date");
+					return returnValue;
+				}
 			}
 			return returnValue;
 		}

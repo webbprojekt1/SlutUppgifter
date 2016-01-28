@@ -56,7 +56,7 @@ public class ReadFeedback extends HttpServlet {
 			ServletContext context = getServletContext();
 			String name = request.getParameter("bild");			
 		     String filename = "/WEB-INF/Feedback/" + name + ".txt";
-	
+	         //System.out.println(filename);
 		     InputStream is = context.getResourceAsStream(filename);
       
 		     if (is != null){
