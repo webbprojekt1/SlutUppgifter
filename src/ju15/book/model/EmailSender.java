@@ -42,7 +42,7 @@ public class EmailSender {
 
 			//change security access https://www.google.com/settings/security/lesssecureapps
 			Message message = new MimeMessage(session);
-			message.setSubject("New booking");
+			message.setSubject("New booking:"+bi.getItemnum()+" "+bi.getStartDate()+"-"+bi.getEndDate());
 			message.setText(bi.getItemnum()+"\n"+bi.getName()+":"+"\n"+bi.getEmail()+"\n"+"From "+bi.getStartDate()
 			                +" to "+bi.getEndDate()+"\n"+bi.getMessage());
 			message.setFrom(new InternetAddress(bi.getEmail()));

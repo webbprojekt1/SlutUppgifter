@@ -11,6 +11,9 @@
 
 
 <body>
+ <div id="bookinfo">
+ <h1 id="bookinfotitle">Your Booking Information</h1>
+ <img src="${house.url}" alt="${bi.itemnum}" />
  <p>Your house is: ${bi.itemnum}</p>
  <p>Your name is: ${bi.name}</p>
  <p>Your email is: ${bi.email}</p>
@@ -21,6 +24,6 @@
 		accept-charset="UTF-8">
  <input type="submit" name="submit" value="Confirm">
  </form>
- 
+ </div>
 </body>
 </html>

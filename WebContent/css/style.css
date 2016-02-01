@@ -177,6 +177,19 @@ input[type=submit] { background-color: #FFC374; border: none; color: white; padd
 #contact-text h4{color: #FFC374; text-align: center; paddind-top: 10px;}
 
 
+/*
+|--------------------------------------------------------------------------
+| Result JSP / Bo Yang
+|--------------------------------------------------------------------------
+*/
+#bookinfo{
+	position:relative;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
 
-
+#bookinfotitle{
+	text-align:center;
+}
 
