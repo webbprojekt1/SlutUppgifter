@@ -11,7 +11,7 @@
 </head>
 <body id="housebookbody">
  <div id="bookinfo">
- <h1 id="bookinfotitle">Your Booking Information</h1>
+ <h1 id="bookinfotitle">Your Booking Information:</h1>
  <img src="${house.url}" alt="${bi.itemnum}" />
  <p>Your house is: ${bi.itemnum}</p>
  <p>Your name is: ${bi.name}</p>
