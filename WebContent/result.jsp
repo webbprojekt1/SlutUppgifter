@@ -1,3 +1,4 @@
+<!-- Author:Bo Yang -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,9 +9,7 @@
   <title>Confirm Booking</title>
  
 </head>
-
-
-<body>
+<body id="housebookbody">
  <div id="bookinfo">
  <h1 id="bookinfotitle">Your Booking Information</h1>
  <img src="${house.url}" alt="${bi.itemnum}" />

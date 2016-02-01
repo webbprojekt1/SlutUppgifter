@@ -32,7 +32,16 @@ public class Servlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		doPost(request, response);
+
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		response.setContentType("text/html");
 
 		HttpSession session = request.getSession();
@@ -61,28 +70,17 @@ public class Servlet extends HttpServlet {
 				try {
 					EmailSender.sendMail(bi);
 					session.invalidate();
-					session=request.getSession();
+					session = request.getSession();
 					String url = "/thanks.html";
 					getServletContext().getRequestDispatcher(url).forward(request, response);
 				} catch (Exception e) {
-					
+
 					String url = "/error.jsp";
 					getServletContext().getRequestDispatcher(url).forward(request, response);
 				}
 
 			}
 		}
-
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
 
 }
