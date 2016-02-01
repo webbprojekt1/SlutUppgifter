@@ -37,7 +37,7 @@
 
 
 		<div class="img-one">
-			<img src="${house.url}" alt="${house.url}" width="100" height="100" id="main-pic"/>
+			<img src="${house.url}" alt="${house.url}" width="650" height="400" id="main-pic"/>
 			<input type="hidden" name="bild" value="${house.name}">
 		</div>
 		
@@ -52,29 +52,32 @@
 		</div>
 
 
-		<div id="titel-2">
-			<h2>Description:</h2>
+		<h2>Description:</h2>
+		<div id="description">			
 			<div id="text-1">${house.description} </div>
 		</div>
 	</div>
 	
+<div id="wrapper-review">
 	<!-- Irina Fatkoulin -->
 	<div>
-		<h3 >Guest reviews</h3>
+		<h2>Guest reviews</h2><hr>
 		<div id = "feedback"></div>
 			<button type = "button"  onmouseover  = "loadDoc()" onmouseout = "clean()" >Read all reviews
 			</button>
-			<div id="all" onmouseover  = "loadDoc()" onmouseout = "clean()" ></div>
-			
+			<div id="all" onmouseover  = "loadDoc()" onmouseout = "clean()" ></div>	
 	</div>
+
 
 	<div>
 		<form name="commentForm" method="post" action="SparaComment"> 
-		<textarea rows="5" cols="30" name="feedback" placeholder="Write feedback:"></textarea>
-  		<input type="hidden" name="nameOfHouse" id="nameOfHouse" value = "${house.name}" />
+		<textarea rows="5" cols="30" name="feedback" placeholder="Write feedback:" id="feedback"></textarea>
+  		<input type="hidden" name="nameOfHouse" id="nameOfHouse" value = "${house.name}" /><br>
   		<input type="submit" onclick="loadSistaComment()" value="Add" />
 		</form>
 	</div>
+</div>
+	
     <form id="bookform" method="get" target="_self" action="Servlet" onsubmit="return validate(this)"
 		accept-charset="UTF-8">
 	<div class="wrapper-2">

@@ -8,6 +8,8 @@
   <title>Confirm Booking</title>
  
 </head>
+
+
 <body>
  <p>Your house is: ${bi.itemnum}</p>
  <p>Your name is: ${bi.name}</p>
